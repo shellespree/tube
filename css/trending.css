@@ -1,0 +1,127 @@
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color:maroon;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+/* Page Content. The value ofthe margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 50px;
+    text-align:left;    
+}
+
+/* On screens that areless than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width:700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a{float: left}
+    div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width:400px) {
+    .sidebar a{
+        text-align: center;
+        float: none;
+    }
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 10px;
+    grid-auto-rows: 3em;
+    grid-gap: 250px;
+    background-color:gray;
+    margin-left: 150px;
+    
+}
+  .search {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;}
+
+    * 
+    {box-sizing: border-box;}
+
+    .search-container input[type=text] {
+        padding: 10px;
+        float: right;
+        width: 150px;
+        font-size: 15px;
+        border: 2px solid grey;
+        background: #f1f1f1;
+      }
+      .search-container button {
+        float: right;
+        padding:10px;
+        margin-top: 2px;
+        margin-right: 1px;
+        background: #ddd;
+        font-size: 10px;
+        border: 2px solid black;
+        cursor:pointer;
+        width: 50px;
+        color: maroon;
+    
+      }
+
+     .search-container button:hover {
+        background: #ccc;
+      }
+      
+      @media screen and (max-width: 600px) {
+     .search-container {
+          float: none;
+        }
+    }
+
+    .image1 {
+        height: 40px;
+        width: 40px;
+        margin-left: 50px;
+        float: left;
+    }
+    .container .design1{
+        border: 1px solid black;
+        height: 500%;
+        width: 100%;
+        text-align: center;
+    }
+    .image2 {
+        display: block;
+        width: 100%;
+        height: 75%;
+    }
